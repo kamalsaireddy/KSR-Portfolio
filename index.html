@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal Sai Reddy - Talent Acquisition consultant</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --dark: #172554;
+            --light: #f8fafc;
+            --accent: #3b82f6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+        }
+        
+        button, .btn {
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-Iight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        button:hover, .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+            color: var(--dark);
+        }
+        
+        p {
+            margin-bottom: 1em;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-betIen;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-Iight: 700;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--dark);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            font-Iight: 500;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 160px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .btn-highlight {
+            background-color: #ffb703;
+            color: var(--dark);
+        }
+        
+        .btn-highlight:hover {
+            background-color: #fca311;
+            color: var(--dark);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 50px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 24px;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-content h2 {
+            margin-bottom: 20px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .value-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .value-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            background-color: white;
+            color: var(--primary);
+            font-Iight: 600;
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--light);
+            color: var(--secondary);
+        }
+        
+        /* Services Detail */
+        .services-detail .service-item {
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .services-detail .service-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .services-detail .service-item:nth-child(even) .service-content {
+            direction: ltr;
+        }
+        
+        .service-content h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .service-image {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        /* Job Application Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: modalopen 0.3s;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-60px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close-modal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-Iight: bold;
+            cursor: pointer;
+        }
+        
+        .close-modal:hover {
+            color: var(--dark);
+        }
+        
+        .modal-header {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-Iight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group .file-input {
+            padding: 10px 0;
+        }
+        
+        .submit-section {
+            margin-top: 20px;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background-color: #d1e7dd;
+            color: #0f5132;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-logo {
+            color: white;
+            font-size: 24px;
+            font-Iight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #ccc;
+        }
+        
+        .footer-links ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-detail .service-item {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-detail .service-item:nth-child(even) {
+                direction: ltr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            nav {
+                position: absolute;
+                right: 0;
+                top: 60px;
+                background-color: white;
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+            }
+            
+            nav.active {
+                height: auto;
+                padding: 20px 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">KSR <span>Talent Acquisition consultant</span></div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Job Application Modal -->
+    <div id="jobApplicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Find your Perfect Job Match</h2>
+                <p>Complete the form below to help me match you with the best IT opportunities that suit your skills and aspirations.</p>
+            </div>
+            
+            <form id="jobApplicationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name*</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentRole">Current Role*</label>
+                        <input type="text" id="currentRole" name="currentRole" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="currentCTC">Current CTC (Annual in USD)*</label>
+                        <input type="text" id="currentCTC" name="currentCTC" placeholder="e.g. $75,000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expectedCTC">Expected CTC (Annual in USD)*</label>
+                        <input type="text" id="expectedCTC" name="expectedCTC" placeholder="e.g. $90,000" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="resumeUpload">Upload your CV/Resume* (PDF, DOC or DOCX)</label>
+                    <input type="file" id="resumeUpload" name="resumeUpload" class="file-input" accept=".pdf,.doc,.docx" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="workExperience">Years of Experience*</label>
+                    <select id="workExperience" name="workExperience" required>
+                        <option value="">Select experience level</option>
+                        <option value="0-1">Less than 1 year</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5-8">5-8 years</option>
+                        <option value="8-12">8-12 years</option>
+                        <option value="12+">12+ years</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="preferredLocation">Preferred Work Location</label>
+                    <input type="text" id="preferredLocation" name="preferredLocation" placeholder="e.g. New York, Remote, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="skills">Key Skills* (separate with commas)</label>
+                    <input type="text" id="skills" name="skills" placeholder="e.g. Java, Python, React, AWS, DevOps" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your career goals, notice period, or any other details that might help us find your perfect match"></textarea>
+                </div>
+                
+                <div class="submit-section">
+                    <button type="submit" class="btn">Submit Application</button>
+                </div>
+                
+                <div id="successMessage" class="success-message">
+                    your application has been submitted successfully! My team will review your profile and contact you soon.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Kamal Sai Reddy</h1>
+            <p>When AMBITION Meets BRILLIANCE Company WINS and I'm bringing the BOTH</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn">My Services</a>
+                <a href="https://forms.gle/u93CCHjSjqSMAmNn8" id="jobSearchBtn" class="btn btn-highlight">Search job that matches you</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Glance Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title text-center">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card text-center">
+                    <div class="service-icon">🔍</div>
+                    <h3>Talent Acquisition</h3>
+                    <p> Strategic recruitment solutions designed to match top-tier talent with your technical needs. I get the unique challenges of IT hiring and I know how to solve them.</p>
+                </div>
+                <div class="service-card text-center">
+                    <div class="service-icon">👥</div>
+                    <h3>IT Staffing</h3>
+                    <p>Flexible staffing solutions tailored to your IT department's needs whether it's contract, contract-to-hire, or direct placement. I've got you covered.</p>
+                </div>
+                <div class="service-card text-center">
+                    <div class="service-icon">💡</div>
+                    <h3>IT Recruitment</h3>
+                    <p>Expert guidance on workforce planning, technical team building, and IT department optimization for maximum productivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title text-center">About Kamal sai reddy</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="C:\Users\kamal\Downloads\1.jpg" alt="KSR IT Services Team">
+                </div>
+                <div class="about-content">
+                    <h2>My Story</h2>
+                    <p>Hi, I’m Kamal Sai Reddy, a Talent Acquisition Consultant with hands-on experience in both domestic and international IT hiring. Currently at Primus Global IT Solutions, I lead full-cycle recruitment using platforms like LinkedIn, Naukri, Ceipal to help companies find the right talent—fast and efficiently.
+Previously, I interned with Sansaone, where I supported European hiring and offer processes, and with Infosys, where I contributed to business process optimization in a BPM role. I’m passionate about building people-driven strategies that blend hiring excellence with business outcomes..</p>
+                 
+                    
+                    <h3>My Mission</h3>
+                    <p>To provide exceptional talent solutions that employer organizations to achieve their technology goals while creating meaningful career opportunities for IT professionals.</p>
+                    
+                    <h3>My Vision</h3>
+                    <p>To become the most trusted IT talent partner by consistently delivering quality candidates, maintaining transparent relationships, and staying ahead of industry trends.</p>
+
+                    
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">✓</div>
+                            <div>Integrity in all interactions</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">✓</div>
+                            <div>Quality over quantity</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">✓</div>
+                            <div>Client-focused approach</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">✓</div>
+                            <div>Innovation in recruitment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Certifications Section -->
+<section class="services">
+  <div class="container">
+    <h2 class="section-title text-center">Certifications</h2>
+    <div class="services-grid">
+      <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\1751285130629.jpg" alt="Generative AI Certificate" style="width:100%; height:auto;" />
+        <h3>Generative AI, Recruiting, and Talent Acquisition</h3>
+        <p>LinkedIn Learning / PMI / NASBA</p>
+        <p>Completed: June 30, 2025</p>
+      </div>
+      
+       <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\Naukri maestro certificate.jpg" alt="HR Course Certificate" style="width:100%; height:auto;" />
+        <h3>Naukri Maestro Recruiter Certificate</h3>
+        <p>Naukri.com</p>
+        <p>Completed: May 25, 2025</p>
+      </div>
+
+      <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\Linkedin Recruiter.jpg" alt="HR Course Certificate" style="width:100%; height:auto;" />
+        <h3>LinkedIn Recruiter</h3>
+        <p>LinkedIn Learning</p>
+        <p>Completed: June 30, 2025</p>
+      </div>
+
+       <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\ohsc1_page-0001.jpg" alt="HR Course Certificate" style="width:100%; height:auto;" />
+        <h3>HR Course Certificate</h3>
+        <p>Oxford Home Study Centre</p>
+        <p>Completed: May 31, 2025</p>
+      </div>
+
+      <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\Certificate (4)_page-0001.jpg" style="width:100%; height:auto;" />
+        <h3>Data Science using Python & R Programming</h3>
+        <p>360DigiTMG, India</p>
+        <p>Completed: December 6, 2024</p>
+      </div>
+
+      <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\ohsc_page-0001.jpg" style="width:100%; height:auto;" />
+        <h3>HR Management Certificate</h3>
+        <p>Oxford Home Study Centre</p>
+      </div>
+
+     <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\PDS COMPLETION CERTIFICATE_page-0001 (1).jpg" alt="Professional Program on Data Science" style="width:100%; height:auto;" />
+        <h3>Professional Program on Data Science</h3>
+        <p>360DigiTMG, India</p>
+        <p>Completed: December 6, 2024</p>
+      </div>
+
+      <div class="service-card text-center">
+        <img src="C:\Users\kamal\Downloads\Certificate (2)_page-0001.jpg" alt="Additional Certificate" style="width:100%; height:auto;" />
+        <h3>Data Visualisation using Power BI</h3>
+        <p>360DigiTMG, India</p>
+        <p>Completed: December 6, 2024</p>
+        <p>Uploaded Certification</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Find your Next IT Star?</h2>
+            <p>Let's discuss how Kamal can help you achieve your talent acquisition goals.</p>
+            <a href="#contact" class="btn cta-button">Contact me Today</a>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="services-detail">
+        <div class="container">
+            <h2 class="section-title text-center">My Comprehensive Services</h2>
+            
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="C:\Users\kamal\Downloads\3.webp" alt="Talent Acquisition">
+                </div>
+                <div class="service-content">
+                    <h3>Talent Acquisition</h3>
+                    <p>My specialized talent acquisition services help companies identify, attract, and secure top IT talent. I combine industry expertise with a deep understanding of technical roles to deliver candidates who are not just qualified, but are the right cultural fit for your organization.</p>
+                    <ul>
+                        <li>Executive IT recruiting</li>
+                        <li>Technical skill assessment</li>
+                        <li>Specialized technical role placement</li>
+                        <li>Diversity hiring initiatives</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="C:\Users\kamal\Downloads\2.avif" alt="IT Staffing">
+                </div>
+                <div class="service-content">
+                    <h3>IT Staffing Solutions</h3>
+                    <p>My flexible IT staffing solutions are designed to meet your workforce needs, whether temporary, contract-to-hire, or permanent placement. I maintain a vast network of pre-screened IT professionals ready to join your team.</p>
+                    <ul>
+                        <li>Contract staffing</li>
+                        <li>Contract-to-hire arrangements</li>
+                        <li>Direct placement</li>
+                        <li>Project-based team assembly</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-image">
+                    <img src="C:\Users\kamal\Downloads\4.jpg" alt="IT Recruitment">
+                </div>
+                <div class="service-content">
+                    <h3>IT Recruitment Services</h3>
+                    <p>My Recruitment services help organizations optimize their talent strategies and IT department structure. I provide valuable insights on workforce planning, team composition, and recruitment process optimization.</p>
+                    <ul>
+                        <li>IT workforce planning</li>
+                        <li>Recruitment process Recruitment</li>
+                        <li>Technical team building strategies</li>
+                        <li>IT department optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Get in Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>I’m available to answer any questions you might have about the services I offer and how I can support your organization’s success..</p>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Address:</strong><br>
+                           Hyderabad, Telangana<br>
+                            India
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Phone:</strong><br>
+                            +91 9505575268
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <strong>Email:</strong><br>
+                            ksritservices2@gmail.com
+                        </div>
+                    </div>
+                    
+                    <h3>Follow me</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100016342153083" class="social-icon">f</a>
+                        <a href="https://www.linkedin.com/in/kamal-sai-reddy-a244a526b" class="social-icon">in</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="https://www.instagram.com/kamal_ks_7352/?__pwa=1" class="social-icon">ig</a>
+                    </div>
+                </div>
+                
+            <div class="contact-form">
+                <h3>Send me a Message</h3>
+                <form action="mailto:ksritservices2@gmail.com" method="POST" enctype="text/plain">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">KSR TAC</div>
+                    <p>Connecting exceptional talent with innovative companies through specialized IT recruitment and staffing solutions.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About me</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
